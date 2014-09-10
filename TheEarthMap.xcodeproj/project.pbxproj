@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC2B121C19BC2DA9001FE1C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121B19BC2DA9001FE1C5 /* Foundation.framework */; };
+		DC2B121E19BC2DA9001FE1C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121D19BC2DA9001FE1C5 /* CoreGraphics.framework */; };
+		DC2B122019BC2DA9001FE1C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */; };
+		DC2B122619BC2DA9001FE1C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2B122419BC2DA9001FE1C5 /* InfoPlist.strings */; };
+		DC2B122819BC2DA9001FE1C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2B122719BC2DA9001FE1C5 /* main.m */; };
+		DC2B122C19BC2DA9001FE1C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2B122B19BC2DA9001FE1C5 /* AppDelegate.m */; };
+		DC2B122F19BC2DA9001FE1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2B122D19BC2DA9001FE1C5 /* Main.storyboard */; };
+		DC2B123219BC2DA9001FE1C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2B123119BC2DA9001FE1C5 /* ViewController.m */; };
+		DC2B123419BC2DA9001FE1C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2B123319BC2DA9001FE1C5 /* Images.xcassets */; };
+		DC2B123B19BC2DA9001FE1C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B123A19BC2DA9001FE1C5 /* XCTest.framework */; };
+		DC2B123C19BC2DA9001FE1C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121B19BC2DA9001FE1C5 /* Foundation.framework */; };
+		DC2B123D19BC2DA9001FE1C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */; };
+		DC2B124519BC2DA9001FE1C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2B124319BC2DA9001FE1C5 /* InfoPlist.strings */; };
+		DC2B124719BC2DA9001FE1C5 /* TheEarthMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */; };
+		DCD2720619BD31740003955D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD2720519BD31740003955D /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC2B123E19BC2DA9001FE1C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC2B121019BC2DA9001FE1C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC2B121719BC2DA9001FE1C5;
+			remoteInfo = TheEarthMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC2B121819BC2DA9001FE1C5 /* TheEarthMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheEarthMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2B121B19BC2DA9001FE1C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC2B121D19BC2DA9001FE1C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DC2B122319BC2DA9001FE1C5 /* TheEarthMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheEarthMap-Info.plist"; sourceTree = "<group>"; };
+		DC2B122519BC2DA9001FE1C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC2B122719BC2DA9001FE1C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC2B122919BC2DA9001FE1C5 /* TheEarthMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheEarthMap-Prefix.pch"; sourceTree = "<group>"; };
+		DC2B122A19BC2DA9001FE1C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC2B122B19BC2DA9001FE1C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC2B122E19BC2DA9001FE1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC2B123019BC2DA9001FE1C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC2B123119BC2DA9001FE1C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC2B123319BC2DA9001FE1C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC2B123919BC2DA9001FE1C5 /* TheEarthMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheEarthMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2B123A19BC2DA9001FE1C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DC2B124219BC2DA9001FE1C5 /* TheEarthMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheEarthMapTests-Info.plist"; sourceTree = "<group>"; };
+		DC2B124419BC2DA9001FE1C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheEarthMapTests.m; sourceTree = "<group>"; };
+		DCD2720519BD31740003955D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC2B121519BC2DA9001FE1C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD2720619BD31740003955D /* MapKit.framework in Frameworks */,
+				DC2B121E19BC2DA9001FE1C5 /* CoreGraphics.framework in Frameworks */,
+				DC2B122019BC2DA9001FE1C5 /* UIKit.framework in Frameworks */,
+				DC2B121C19BC2DA9001FE1C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2B123619BC2DA9001FE1C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2B123B19BC2DA9001FE1C5 /* XCTest.framework in Frameworks */,
+				DC2B123D19BC2DA9001FE1C5 /* UIKit.framework in Frameworks */,
+				DC2B123C19BC2DA9001FE1C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC2B120F19BC2DA9001FE1C5 = {
+			isa = PBXGroup;
+			children = (
+				DC2B122119BC2DA9001FE1C5 /* TheEarthMap */,
+				DC2B124019BC2DA9001FE1C5 /* TheEarthMapTests */,
+				DC2B121A19BC2DA9001FE1C5 /* Frameworks */,
+				DC2B121919BC2DA9001FE1C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC2B121919BC2DA9001FE1C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B121819BC2DA9001FE1C5 /* TheEarthMap.app */,
+				DC2B123919BC2DA9001FE1C5 /* TheEarthMapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC2B121A19BC2DA9001FE1C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCD2720519BD31740003955D /* MapKit.framework */,
+				DC2B121B19BC2DA9001FE1C5 /* Foundation.framework */,
+				DC2B121D19BC2DA9001FE1C5 /* CoreGraphics.framework */,
+				DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */,
+				DC2B123A19BC2DA9001FE1C5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC2B122119BC2DA9001FE1C5 /* TheEarthMap */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B122A19BC2DA9001FE1C5 /* AppDelegate.h */,
+				DC2B122B19BC2DA9001FE1C5 /* AppDelegate.m */,
+				DC2B122D19BC2DA9001FE1C5 /* Main.storyboard */,
+				DC2B123019BC2DA9001FE1C5 /* ViewController.h */,
+				DC2B123119BC2DA9001FE1C5 /* ViewController.m */,
+				DC2B123319BC2DA9001FE1C5 /* Images.xcassets */,
+				DC2B122219BC2DA9001FE1C5 /* Supporting Files */,
+			);
+			path = TheEarthMap;
+			sourceTree = "<group>";
+		};
+		DC2B122219BC2DA9001FE1C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B122319BC2DA9001FE1C5 /* TheEarthMap-Info.plist */,
+				DC2B122419BC2DA9001FE1C5 /* InfoPlist.strings */,
+				DC2B122719BC2DA9001FE1C5 /* main.m */,
+				DC2B122919BC2DA9001FE1C5 /* TheEarthMap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC2B124019BC2DA9001FE1C5 /* TheEarthMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */,
+				DC2B124119BC2DA9001FE1C5 /* Supporting Files */,
+			);
+			path = TheEarthMapTests;
+			sourceTree = "<group>";
+		};
+		DC2B124119BC2DA9001FE1C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B124219BC2DA9001FE1C5 /* TheEarthMapTests-Info.plist */,
+				DC2B124319BC2DA9001FE1C5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC2B121719BC2DA9001FE1C5 /* TheEarthMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC2B124A19BC2DA9001FE1C5 /* Build configuration list for PBXNativeTarget "TheEarthMap" */;
+			buildPhases = (
+				DC2B121419BC2DA9001FE1C5 /* Sources */,
+				DC2B121519BC2DA9001FE1C5 /* Frameworks */,
+				DC2B121619BC2DA9001FE1C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheEarthMap;
+			productName = TheEarthMap;
+			productReference = DC2B121819BC2DA9001FE1C5 /* TheEarthMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC2B123819BC2DA9001FE1C5 /* TheEarthMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC2B124D19BC2DA9001FE1C5 /* Build configuration list for PBXNativeTarget "TheEarthMapTests" */;
+			buildPhases = (
+				DC2B123519BC2DA9001FE1C5 /* Sources */,
+				DC2B123619BC2DA9001FE1C5 /* Frameworks */,
+				DC2B123719BC2DA9001FE1C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC2B123F19BC2DA9001FE1C5 /* PBXTargetDependency */,
+			);
+			name = TheEarthMapTests;
+			productName = TheEarthMapTests;
+			productReference = DC2B123919BC2DA9001FE1C5 /* TheEarthMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC2B121019BC2DA9001FE1C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ken Harada";
+				TargetAttributes = {
+					DC2B123819BC2DA9001FE1C5 = {
+						TestTargetID = DC2B121719BC2DA9001FE1C5;
+					};
+				};
+			};
+			buildConfigurationList = DC2B121319BC2DA9001FE1C5 /* Build configuration list for PBXProject "TheEarthMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC2B120F19BC2DA9001FE1C5;
+			productRefGroup = DC2B121919BC2DA9001FE1C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC2B121719BC2DA9001FE1C5 /* TheEarthMap */,
+				DC2B123819BC2DA9001FE1C5 /* TheEarthMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC2B121619BC2DA9001FE1C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2B123419BC2DA9001FE1C5 /* Images.xcassets in Resources */,
+				DC2B122619BC2DA9001FE1C5 /* InfoPlist.strings in Resources */,
+				DC2B122F19BC2DA9001FE1C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2B123719BC2DA9001FE1C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2B124519BC2DA9001FE1C5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC2B121419BC2DA9001FE1C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2B123219BC2DA9001FE1C5 /* ViewController.m in Sources */,
+				DC2B122C19BC2DA9001FE1C5 /* AppDelegate.m in Sources */,
+				DC2B122819BC2DA9001FE1C5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2B123519BC2DA9001FE1C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2B124719BC2DA9001FE1C5 /* TheEarthMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC2B123F19BC2DA9001FE1C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC2B121719BC2DA9001FE1C5 /* TheEarthMap */;
+			targetProxy = DC2B123E19BC2DA9001FE1C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC2B122419BC2DA9001FE1C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2B122519BC2DA9001FE1C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC2B122D19BC2DA9001FE1C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2B122E19BC2DA9001FE1C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC2B124319BC2DA9001FE1C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2B124419BC2DA9001FE1C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC2B124819BC2DA9001FE1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DC2B124919BC2DA9001FE1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC2B124B19BC2DA9001FE1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheEarthMap/TheEarthMap-Prefix.pch";
+				INFOPLIST_FILE = "TheEarthMap/TheEarthMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC2B124C19BC2DA9001FE1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheEarthMap/TheEarthMap-Prefix.pch";
+				INFOPLIST_FILE = "TheEarthMap/TheEarthMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DC2B124E19BC2DA9001FE1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TheEarthMap.app/TheEarthMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheEarthMap/TheEarthMap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TheEarthMapTests/TheEarthMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DC2B124F19BC2DA9001FE1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TheEarthMap.app/TheEarthMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheEarthMap/TheEarthMap-Prefix.pch";
+				INFOPLIST_FILE = "TheEarthMapTests/TheEarthMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC2B121319BC2DA9001FE1C5 /* Build configuration list for PBXProject "TheEarthMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2B124819BC2DA9001FE1C5 /* Debug */,
+				DC2B124919BC2DA9001FE1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC2B124A19BC2DA9001FE1C5 /* Build configuration list for PBXNativeTarget "TheEarthMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2B124B19BC2DA9001FE1C5 /* Debug */,
+				DC2B124C19BC2DA9001FE1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC2B124D19BC2DA9001FE1C5 /* Build configuration list for PBXNativeTarget "TheEarthMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2B124E19BC2DA9001FE1C5 /* Debug */,
+				DC2B124F19BC2DA9001FE1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC2B121019BC2DA9001FE1C5 /* Project object */;
+}
