@@ -110,7 +110,7 @@
     MKPointAnnotation *pin21 =[self createdPin:CLLocationCoordinate2DMake(14.599512,120.984219) title:@"フィリピン"];
     [mapView addAnnotation:pin21];
     
-    MKPointAnnotation *pin22 =[self createdPin:CLLocationCoordinate2DMake(39.92077,32.85411) title:@"トルコ"];
+    MKPointAnnotation *pin22 =[self createdPin:CLLocationCoordinate2DMake(31.956578,35.945695) title:@"ネパール"];
     [mapView addAnnotation:pin22];
     
     MKPointAnnotation *pin23 =[self createdPin:CLLocationCoordinate2DMake(47.92,106.92) title:@"モンゴル"];
@@ -122,7 +122,7 @@
     MKPointAnnotation *pin25 =[self createdPin:CLLocationCoordinate2DMake(5.55,-0.2) title:@"ガーナ"];
     [mapView addAnnotation:pin25];
     
-    MKPointAnnotation *pin26 =[self createdPin:CLLocationCoordinate2DMake(-19.019585,-65.261962) title:@"ボリビア"];
+    MKPointAnnotation *pin26 =[self createdPin:CLLocationCoordinate2DMake(31.956578,35.945695) title:@"ヨルダン"];
     [mapView addAnnotation:pin26];
 
 
@@ -171,8 +171,20 @@
         
     }
     return pinView;
+}
+
+-(void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    //iボタンを押したときに動作を記述するメソッド
+    NSLog(@"%@",view.annotation.title);
+    
+   
+    
+
+    
     
 }
+    
+
 
 - (void)didReceiveMemoryWarning
 {

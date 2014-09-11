@@ -21,6 +21,8 @@
 		DC2B123D19BC2DA9001FE1C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */; };
 		DC2B124519BC2DA9001FE1C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2B124319BC2DA9001FE1C5 /* InfoPlist.strings */; };
 		DC2B124719BC2DA9001FE1C5 /* TheEarthMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */; };
+		DC54339019C0857200EC99BC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC54338F19C0857200EC99BC /* DetailViewController.m */; };
+		DCD05A7319C1EAF60052CFB4 /* 2DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD05A7219C1EAF60052CFB4 /* 2DetailViewController.m */; };
 		DCD2720619BD31740003955D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD2720519BD31740003955D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,10 @@
 		DC2B124219BC2DA9001FE1C5 /* TheEarthMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheEarthMapTests-Info.plist"; sourceTree = "<group>"; };
 		DC2B124419BC2DA9001FE1C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheEarthMapTests.m; sourceTree = "<group>"; };
+		DC54338E19C0857200EC99BC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ../DetailViewController.h; sourceTree = "<group>"; };
+		DC54338F19C0857200EC99BC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ../DetailViewController.m; sourceTree = "<group>"; };
+		DCD05A7119C1EAF60052CFB4 /* 2DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 2DetailViewController.h; sourceTree = "<group>"; };
+		DCD05A7219C1EAF60052CFB4 /* 2DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 2DetailViewController.m; sourceTree = "<group>"; };
 		DCD2720519BD31740003955D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,10 @@
 				DC2B122D19BC2DA9001FE1C5 /* Main.storyboard */,
 				DC2B123019BC2DA9001FE1C5 /* ViewController.h */,
 				DC2B123119BC2DA9001FE1C5 /* ViewController.m */,
+				DC54338E19C0857200EC99BC /* DetailViewController.h */,
+				DC54338F19C0857200EC99BC /* DetailViewController.m */,
+				DCD05A7119C1EAF60052CFB4 /* 2DetailViewController.h */,
+				DCD05A7219C1EAF60052CFB4 /* 2DetailViewController.m */,
 				DC2B123319BC2DA9001FE1C5 /* Images.xcassets */,
 				DC2B122219BC2DA9001FE1C5 /* Supporting Files */,
 			);
@@ -256,6 +266,8 @@
 				DC2B123219BC2DA9001FE1C5 /* ViewController.m in Sources */,
 				DC2B122C19BC2DA9001FE1C5 /* AppDelegate.m in Sources */,
 				DC2B122819BC2DA9001FE1C5 /* main.m in Sources */,
+				DCD05A7319C1EAF60052CFB4 /* 2DetailViewController.m in Sources */,
+				DC54339019C0857200EC99BC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
