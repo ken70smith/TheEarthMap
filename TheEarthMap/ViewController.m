@@ -21,7 +21,8 @@
     mapView.delegate=self;
     //mapオブジェクトを生成
     
-    mapView.frame=CGRectMake(0,20,320,460);
+    mapView.frame=CGRectMake(0,50,540,540);
+    //0,20,540,460初期値
     //大きさ位置を決定
     
     CLLocationCoordinate2D co;
@@ -127,11 +128,6 @@
 
 
 
-    
-    
-
-    
-    
     [self.view addSubview:mapView];
      //この意味なに
     
@@ -149,6 +145,7 @@
         
         pin.title=title;
         
+        
         return pin;
     
 	}
@@ -161,13 +158,20 @@
     
     if (pinView==nil) {
         //いろいろ設定できる
+        
+        //annotationの意味は注釈
         pinView=[[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:pinIdentifier];
+        
         pinView.animatesDrop=YES;
         //ピンが落ちてくるアニメーション
         
         //iボタンを押した時画面が反応する為のコード
         pinView.canShowCallout=YES;
-        pinView.rightCalloutAccessoryView=[UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        
+//        UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        pinView.rightCalloutAccessoryView = rightButton;
+//        
+       pinView.rightCalloutAccessoryView=[UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         
     }
     return pinView;
@@ -176,6 +180,39 @@
 -(void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     //iボタンを押したときに動作を記述するメソッド
     NSLog(@"%@",view.annotation.title);
+    //コンソールにどのボタンが押されたかを表示
+    DetailViewController *DetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    
+    //名前と番号を照らし合わせるif文.もしカンボジアが押された時グローバル変数selectnumに〜番の番号を渡す
+    if ([view.annotation.title isEqualToString:@"カンボジア"]) {
+        DetailViewController.selectnum=1;
+
+    }
+    if ([view.annotation.title isEqualToString:@"イスラエル"]) {
+        DetailViewController.selectnum=2;
+    }
+    if ([view.annotation.title isEqualToString:@"ボリビア"]) {
+        DetailViewController.selectnum=3;
+    }
+    if ([view.annotation.title isEqualToString:@"フランス"]) {
+        DetailViewController.selectnum=4;
+    }
+
+
+    if ([view.annotation.title isEqualToString:@"イタリア"]) {
+        DetailViewController.selectnum=5;
+    }
+    
+    
+    
+    [[self navigationController]pushViewController:DetailViewController animated:YES];
+    //この３行で１→２に画面遷移する
+    
+  
+
+    
+    
+    
     
    
     

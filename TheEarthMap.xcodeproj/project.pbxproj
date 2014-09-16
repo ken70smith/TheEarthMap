@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620582ECF2664B10B22CAB33 /* libPods-TheEarthMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B9770A8E404565A00724B2 /* libPods-TheEarthMap.a */; };
 		DC2B121C19BC2DA9001FE1C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121B19BC2DA9001FE1C5 /* Foundation.framework */; };
 		DC2B121E19BC2DA9001FE1C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121D19BC2DA9001FE1C5 /* CoreGraphics.framework */; };
 		DC2B122019BC2DA9001FE1C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */; };
@@ -21,8 +22,53 @@
 		DC2B123D19BC2DA9001FE1C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */; };
 		DC2B124519BC2DA9001FE1C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2B124319BC2DA9001FE1C5 /* InfoPlist.strings */; };
 		DC2B124719BC2DA9001FE1C5 /* TheEarthMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */; };
+		DC50C2C819C6D9F30074FFCE /* 1-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C29B19C6D9F30074FFCE /* 1-1.jpg */; };
+		DC50C2C919C6D9F30074FFCE /* 1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C29C19C6D9F30074FFCE /* 1-2.jpg */; };
+		DC50C2CA19C6D9F30074FFCE /* 1-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C29D19C6D9F30074FFCE /* 1-3.jpg */; };
+		DC50C2CB19C6D9F30074FFCE /* 1-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C29E19C6D9F30074FFCE /* 1-4.jpg */; };
+		DC50C2CC19C6D9F30074FFCE /* 1-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C29F19C6D9F30074FFCE /* 1-5.jpg */; };
+		DC50C2CD19C6D9F30074FFCE /* 1-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A019C6D9F30074FFCE /* 1-6.jpg */; };
+		DC50C2CE19C6D9F30074FFCE /* 1-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A119C6D9F30074FFCE /* 1-7.jpg */; };
+		DC50C2CF19C6D9F30074FFCE /* 1-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A219C6D9F30074FFCE /* 1-8.jpg */; };
+		DC50C2D019C6D9F30074FFCE /* 1-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A319C6D9F30074FFCE /* 1-9.jpg */; };
+		DC50C2D119C6D9F30074FFCE /* 2-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A419C6D9F30074FFCE /* 2-1.jpg */; };
+		DC50C2D219C6D9F30074FFCE /* 2-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A519C6D9F30074FFCE /* 2-2.jpg */; };
+		DC50C2D319C6D9F30074FFCE /* 2-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A619C6D9F30074FFCE /* 2-3.jpg */; };
+		DC50C2D419C6D9F30074FFCE /* 2-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A719C6D9F30074FFCE /* 2-4.jpg */; };
+		DC50C2D519C6D9F30074FFCE /* 2-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A819C6D9F30074FFCE /* 2-5.jpg */; };
+		DC50C2D619C6D9F30074FFCE /* 2-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2A919C6D9F30074FFCE /* 2-6.jpg */; };
+		DC50C2D719C6D9F30074FFCE /* 2-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2AA19C6D9F30074FFCE /* 2-7.jpg */; };
+		DC50C2D819C6D9F30074FFCE /* 2-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2AB19C6D9F30074FFCE /* 2-8.jpg */; };
+		DC50C2D919C6D9F30074FFCE /* 2-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2AC19C6D9F30074FFCE /* 2-9.jpg */; };
+		DC50C2DA19C6D9F30074FFCE /* 3-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2AD19C6D9F30074FFCE /* 3-1.jpg */; };
+		DC50C2DB19C6D9F30074FFCE /* 3-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2AE19C6D9F30074FFCE /* 3-2.jpg */; };
+		DC50C2DC19C6D9F30074FFCE /* 3-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2AF19C6D9F30074FFCE /* 3-3.jpg */; };
+		DC50C2DD19C6D9F30074FFCE /* 3-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B019C6D9F30074FFCE /* 3-4.jpg */; };
+		DC50C2DE19C6D9F30074FFCE /* 3-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B119C6D9F30074FFCE /* 3-5.jpg */; };
+		DC50C2DF19C6D9F30074FFCE /* 3-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B219C6D9F30074FFCE /* 3-6.jpg */; };
+		DC50C2E019C6D9F30074FFCE /* 3-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B319C6D9F30074FFCE /* 3-7.jpg */; };
+		DC50C2E119C6D9F30074FFCE /* 3-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B419C6D9F30074FFCE /* 3-8.jpg */; };
+		DC50C2E219C6D9F30074FFCE /* 3-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B519C6D9F30074FFCE /* 3-9.jpg */; };
+		DC50C2E319C6D9F30074FFCE /* 4-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B619C6D9F30074FFCE /* 4-1.jpg */; };
+		DC50C2E419C6D9F30074FFCE /* 4-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B719C6D9F30074FFCE /* 4-2.jpg */; };
+		DC50C2E519C6D9F30074FFCE /* 4-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B819C6D9F30074FFCE /* 4-3.jpg */; };
+		DC50C2E619C6D9F30074FFCE /* 4-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2B919C6D9F30074FFCE /* 4-4.jpg */; };
+		DC50C2E719C6D9F30074FFCE /* 4-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2BA19C6D9F30074FFCE /* 4-5.jpg */; };
+		DC50C2E819C6D9F30074FFCE /* 4-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2BB19C6D9F30074FFCE /* 4-6.jpg */; };
+		DC50C2E919C6D9F30074FFCE /* 4-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2BC19C6D9F30074FFCE /* 4-7.jpg */; };
+		DC50C2EA19C6D9F30074FFCE /* 4-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2BD19C6D9F30074FFCE /* 4-8.jpg */; };
+		DC50C2EB19C6D9F30074FFCE /* 4-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2BE19C6D9F30074FFCE /* 4-9.jpg */; };
+		DC50C2EC19C6D9F30074FFCE /* 5-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2BF19C6D9F30074FFCE /* 5-1.jpg */; };
+		DC50C2ED19C6D9F30074FFCE /* 5-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C019C6D9F30074FFCE /* 5-2.jpg */; };
+		DC50C2EE19C6D9F30074FFCE /* 5-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C119C6D9F30074FFCE /* 5-3.jpg */; };
+		DC50C2EF19C6D9F30074FFCE /* 5-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C219C6D9F30074FFCE /* 5-4.jpg */; };
+		DC50C2F019C6D9F30074FFCE /* 5-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C319C6D9F30074FFCE /* 5-5.jpg */; };
+		DC50C2F119C6D9F30074FFCE /* 5-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C419C6D9F30074FFCE /* 5-6.jpg */; };
+		DC50C2F219C6D9F30074FFCE /* 5-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C519C6D9F30074FFCE /* 5-7.jpg */; };
+		DC50C2F319C6D9F30074FFCE /* 5-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C619C6D9F30074FFCE /* 5-8.jpg */; };
+		DC50C2F419C6D9F30074FFCE /* 5-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC50C2C719C6D9F30074FFCE /* 5-9.jpg */; };
 		DC54339019C0857200EC99BC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC54338F19C0857200EC99BC /* DetailViewController.m */; };
-		DCD05A7319C1EAF60052CFB4 /* 2DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD05A7219C1EAF60052CFB4 /* 2DetailViewController.m */; };
+		DCAA51DC19C2AF36000E5587 /* DetailViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAA51DB19C2AF36000E5587 /* DetailViewController2.m */; };
 		DCD2720619BD31740003955D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD2720519BD31740003955D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00B9770A8E404565A00724B2 /* libPods-TheEarthMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TheEarthMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1020EC4094DF46649312F67A /* Pods-TheEarthMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheEarthMap.xcconfig"; path = "Pods/Pods-TheEarthMap.xcconfig"; sourceTree = "<group>"; };
 		DC2B121819BC2DA9001FE1C5 /* TheEarthMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheEarthMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2B121B19BC2DA9001FE1C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC2B121D19BC2DA9001FE1C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,10 +104,55 @@
 		DC2B124219BC2DA9001FE1C5 /* TheEarthMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheEarthMapTests-Info.plist"; sourceTree = "<group>"; };
 		DC2B124419BC2DA9001FE1C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC2B124619BC2DA9001FE1C5 /* TheEarthMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheEarthMapTests.m; sourceTree = "<group>"; };
+		DC50C29B19C6D9F30074FFCE /* 1-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-1.jpg"; sourceTree = "<group>"; };
+		DC50C29C19C6D9F30074FFCE /* 1-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-2.jpg"; sourceTree = "<group>"; };
+		DC50C29D19C6D9F30074FFCE /* 1-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-3.jpg"; sourceTree = "<group>"; };
+		DC50C29E19C6D9F30074FFCE /* 1-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-4.jpg"; sourceTree = "<group>"; };
+		DC50C29F19C6D9F30074FFCE /* 1-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-5.jpg"; sourceTree = "<group>"; };
+		DC50C2A019C6D9F30074FFCE /* 1-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-6.jpg"; sourceTree = "<group>"; };
+		DC50C2A119C6D9F30074FFCE /* 1-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-7.jpg"; sourceTree = "<group>"; };
+		DC50C2A219C6D9F30074FFCE /* 1-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-8.jpg"; sourceTree = "<group>"; };
+		DC50C2A319C6D9F30074FFCE /* 1-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-9.jpg"; sourceTree = "<group>"; };
+		DC50C2A419C6D9F30074FFCE /* 2-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-1.jpg"; sourceTree = "<group>"; };
+		DC50C2A519C6D9F30074FFCE /* 2-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-2.jpg"; sourceTree = "<group>"; };
+		DC50C2A619C6D9F30074FFCE /* 2-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-3.jpg"; sourceTree = "<group>"; };
+		DC50C2A719C6D9F30074FFCE /* 2-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-4.jpg"; sourceTree = "<group>"; };
+		DC50C2A819C6D9F30074FFCE /* 2-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-5.jpg"; sourceTree = "<group>"; };
+		DC50C2A919C6D9F30074FFCE /* 2-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-6.jpg"; sourceTree = "<group>"; };
+		DC50C2AA19C6D9F30074FFCE /* 2-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-7.jpg"; sourceTree = "<group>"; };
+		DC50C2AB19C6D9F30074FFCE /* 2-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-8.jpg"; sourceTree = "<group>"; };
+		DC50C2AC19C6D9F30074FFCE /* 2-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-9.jpg"; sourceTree = "<group>"; };
+		DC50C2AD19C6D9F30074FFCE /* 3-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-1.jpg"; sourceTree = "<group>"; };
+		DC50C2AE19C6D9F30074FFCE /* 3-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-2.jpg"; sourceTree = "<group>"; };
+		DC50C2AF19C6D9F30074FFCE /* 3-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-3.jpg"; sourceTree = "<group>"; };
+		DC50C2B019C6D9F30074FFCE /* 3-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-4.jpg"; sourceTree = "<group>"; };
+		DC50C2B119C6D9F30074FFCE /* 3-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-5.jpg"; sourceTree = "<group>"; };
+		DC50C2B219C6D9F30074FFCE /* 3-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-6.jpg"; sourceTree = "<group>"; };
+		DC50C2B319C6D9F30074FFCE /* 3-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-7.jpg"; sourceTree = "<group>"; };
+		DC50C2B419C6D9F30074FFCE /* 3-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-8.jpg"; sourceTree = "<group>"; };
+		DC50C2B519C6D9F30074FFCE /* 3-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-9.jpg"; sourceTree = "<group>"; };
+		DC50C2B619C6D9F30074FFCE /* 4-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-1.jpg"; sourceTree = "<group>"; };
+		DC50C2B719C6D9F30074FFCE /* 4-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-2.jpg"; sourceTree = "<group>"; };
+		DC50C2B819C6D9F30074FFCE /* 4-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-3.jpg"; sourceTree = "<group>"; };
+		DC50C2B919C6D9F30074FFCE /* 4-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-4.jpg"; sourceTree = "<group>"; };
+		DC50C2BA19C6D9F30074FFCE /* 4-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-5.jpg"; sourceTree = "<group>"; };
+		DC50C2BB19C6D9F30074FFCE /* 4-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-6.jpg"; sourceTree = "<group>"; };
+		DC50C2BC19C6D9F30074FFCE /* 4-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-7.jpg"; sourceTree = "<group>"; };
+		DC50C2BD19C6D9F30074FFCE /* 4-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-8.jpg"; sourceTree = "<group>"; };
+		DC50C2BE19C6D9F30074FFCE /* 4-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-9.jpg"; sourceTree = "<group>"; };
+		DC50C2BF19C6D9F30074FFCE /* 5-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-1.jpg"; sourceTree = "<group>"; };
+		DC50C2C019C6D9F30074FFCE /* 5-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-2.jpg"; sourceTree = "<group>"; };
+		DC50C2C119C6D9F30074FFCE /* 5-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-3.jpg"; sourceTree = "<group>"; };
+		DC50C2C219C6D9F30074FFCE /* 5-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-4.jpg"; sourceTree = "<group>"; };
+		DC50C2C319C6D9F30074FFCE /* 5-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-5.jpg"; sourceTree = "<group>"; };
+		DC50C2C419C6D9F30074FFCE /* 5-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-6.jpg"; sourceTree = "<group>"; };
+		DC50C2C519C6D9F30074FFCE /* 5-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-7.jpg"; sourceTree = "<group>"; };
+		DC50C2C619C6D9F30074FFCE /* 5-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-8.jpg"; sourceTree = "<group>"; };
+		DC50C2C719C6D9F30074FFCE /* 5-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5-9.jpg"; sourceTree = "<group>"; };
 		DC54338E19C0857200EC99BC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ../DetailViewController.h; sourceTree = "<group>"; };
 		DC54338F19C0857200EC99BC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ../DetailViewController.m; sourceTree = "<group>"; };
-		DCD05A7119C1EAF60052CFB4 /* 2DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 2DetailViewController.h; sourceTree = "<group>"; };
-		DCD05A7219C1EAF60052CFB4 /* 2DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 2DetailViewController.m; sourceTree = "<group>"; };
+		DCAA51DA19C2AF36000E5587 /* DetailViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController2.h; path = ../DetailViewController2.h; sourceTree = "<group>"; };
+		DCAA51DB19C2AF36000E5587 /* DetailViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController2.m; path = ../DetailViewController2.m; sourceTree = "<group>"; };
 		DCD2720519BD31740003955D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -72,6 +165,7 @@
 				DC2B121E19BC2DA9001FE1C5 /* CoreGraphics.framework in Frameworks */,
 				DC2B122019BC2DA9001FE1C5 /* UIKit.framework in Frameworks */,
 				DC2B121C19BC2DA9001FE1C5 /* Foundation.framework in Frameworks */,
+				620582ECF2664B10B22CAB33 /* libPods-TheEarthMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +189,7 @@
 				DC2B124019BC2DA9001FE1C5 /* TheEarthMapTests */,
 				DC2B121A19BC2DA9001FE1C5 /* Frameworks */,
 				DC2B121919BC2DA9001FE1C5 /* Products */,
+				1020EC4094DF46649312F67A /* Pods-TheEarthMap.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +210,7 @@
 				DC2B121D19BC2DA9001FE1C5 /* CoreGraphics.framework */,
 				DC2B121F19BC2DA9001FE1C5 /* UIKit.framework */,
 				DC2B123A19BC2DA9001FE1C5 /* XCTest.framework */,
+				00B9770A8E404565A00724B2 /* libPods-TheEarthMap.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,8 +225,8 @@
 				DC2B123119BC2DA9001FE1C5 /* ViewController.m */,
 				DC54338E19C0857200EC99BC /* DetailViewController.h */,
 				DC54338F19C0857200EC99BC /* DetailViewController.m */,
-				DCD05A7119C1EAF60052CFB4 /* 2DetailViewController.h */,
-				DCD05A7219C1EAF60052CFB4 /* 2DetailViewController.m */,
+				DCAA51DA19C2AF36000E5587 /* DetailViewController2.h */,
+				DCAA51DB19C2AF36000E5587 /* DetailViewController2.m */,
 				DC2B123319BC2DA9001FE1C5 /* Images.xcassets */,
 				DC2B122219BC2DA9001FE1C5 /* Supporting Files */,
 			);
@@ -140,6 +236,7 @@
 		DC2B122219BC2DA9001FE1C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC50C29A19C6D9F30074FFCE /* images */,
 				DC2B122319BC2DA9001FE1C5 /* TheEarthMap-Info.plist */,
 				DC2B122419BC2DA9001FE1C5 /* InfoPlist.strings */,
 				DC2B122719BC2DA9001FE1C5 /* main.m */,
@@ -166,6 +263,58 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC50C29A19C6D9F30074FFCE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DC50C29B19C6D9F30074FFCE /* 1-1.jpg */,
+				DC50C29C19C6D9F30074FFCE /* 1-2.jpg */,
+				DC50C29D19C6D9F30074FFCE /* 1-3.jpg */,
+				DC50C29E19C6D9F30074FFCE /* 1-4.jpg */,
+				DC50C29F19C6D9F30074FFCE /* 1-5.jpg */,
+				DC50C2A019C6D9F30074FFCE /* 1-6.jpg */,
+				DC50C2A119C6D9F30074FFCE /* 1-7.jpg */,
+				DC50C2A219C6D9F30074FFCE /* 1-8.jpg */,
+				DC50C2A319C6D9F30074FFCE /* 1-9.jpg */,
+				DC50C2A419C6D9F30074FFCE /* 2-1.jpg */,
+				DC50C2A519C6D9F30074FFCE /* 2-2.jpg */,
+				DC50C2A619C6D9F30074FFCE /* 2-3.jpg */,
+				DC50C2A719C6D9F30074FFCE /* 2-4.jpg */,
+				DC50C2A819C6D9F30074FFCE /* 2-5.jpg */,
+				DC50C2A919C6D9F30074FFCE /* 2-6.jpg */,
+				DC50C2AA19C6D9F30074FFCE /* 2-7.jpg */,
+				DC50C2AB19C6D9F30074FFCE /* 2-8.jpg */,
+				DC50C2AC19C6D9F30074FFCE /* 2-9.jpg */,
+				DC50C2AD19C6D9F30074FFCE /* 3-1.jpg */,
+				DC50C2AE19C6D9F30074FFCE /* 3-2.jpg */,
+				DC50C2AF19C6D9F30074FFCE /* 3-3.jpg */,
+				DC50C2B019C6D9F30074FFCE /* 3-4.jpg */,
+				DC50C2B119C6D9F30074FFCE /* 3-5.jpg */,
+				DC50C2B219C6D9F30074FFCE /* 3-6.jpg */,
+				DC50C2B319C6D9F30074FFCE /* 3-7.jpg */,
+				DC50C2B419C6D9F30074FFCE /* 3-8.jpg */,
+				DC50C2B519C6D9F30074FFCE /* 3-9.jpg */,
+				DC50C2B619C6D9F30074FFCE /* 4-1.jpg */,
+				DC50C2B719C6D9F30074FFCE /* 4-2.jpg */,
+				DC50C2B819C6D9F30074FFCE /* 4-3.jpg */,
+				DC50C2B919C6D9F30074FFCE /* 4-4.jpg */,
+				DC50C2BA19C6D9F30074FFCE /* 4-5.jpg */,
+				DC50C2BB19C6D9F30074FFCE /* 4-6.jpg */,
+				DC50C2BC19C6D9F30074FFCE /* 4-7.jpg */,
+				DC50C2BD19C6D9F30074FFCE /* 4-8.jpg */,
+				DC50C2BE19C6D9F30074FFCE /* 4-9.jpg */,
+				DC50C2BF19C6D9F30074FFCE /* 5-1.jpg */,
+				DC50C2C019C6D9F30074FFCE /* 5-2.jpg */,
+				DC50C2C119C6D9F30074FFCE /* 5-3.jpg */,
+				DC50C2C219C6D9F30074FFCE /* 5-4.jpg */,
+				DC50C2C319C6D9F30074FFCE /* 5-5.jpg */,
+				DC50C2C419C6D9F30074FFCE /* 5-6.jpg */,
+				DC50C2C519C6D9F30074FFCE /* 5-7.jpg */,
+				DC50C2C619C6D9F30074FFCE /* 5-8.jpg */,
+				DC50C2C719C6D9F30074FFCE /* 5-9.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC2B124A19BC2DA9001FE1C5 /* Build configuration list for PBXNativeTarget "TheEarthMap" */;
 			buildPhases = (
+				E93B91B33F574CFA9481F653 /* Check Pods Manifest.lock */,
 				DC2B121419BC2DA9001FE1C5 /* Sources */,
 				DC2B121519BC2DA9001FE1C5 /* Frameworks */,
 				DC2B121619BC2DA9001FE1C5 /* Resources */,
+				5B5395BFDE7545A89A068FA6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,9 +393,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC50C2EF19C6D9F30074FFCE /* 5-4.jpg in Resources */,
+				DC50C2D319C6D9F30074FFCE /* 2-3.jpg in Resources */,
+				DC50C2D719C6D9F30074FFCE /* 2-7.jpg in Resources */,
+				DC50C2F219C6D9F30074FFCE /* 5-7.jpg in Resources */,
+				DC50C2C919C6D9F30074FFCE /* 1-2.jpg in Resources */,
+				DC50C2EE19C6D9F30074FFCE /* 5-3.jpg in Resources */,
+				DC50C2EA19C6D9F30074FFCE /* 4-8.jpg in Resources */,
+				DC50C2CC19C6D9F30074FFCE /* 1-5.jpg in Resources */,
+				DC50C2F319C6D9F30074FFCE /* 5-8.jpg in Resources */,
 				DC2B123419BC2DA9001FE1C5 /* Images.xcassets in Resources */,
+				DC50C2E719C6D9F30074FFCE /* 4-5.jpg in Resources */,
+				DC50C2DA19C6D9F30074FFCE /* 3-1.jpg in Resources */,
+				DC50C2D819C6D9F30074FFCE /* 2-8.jpg in Resources */,
+				DC50C2E119C6D9F30074FFCE /* 3-8.jpg in Resources */,
+				DC50C2CD19C6D9F30074FFCE /* 1-6.jpg in Resources */,
+				DC50C2E419C6D9F30074FFCE /* 4-2.jpg in Resources */,
+				DC50C2C819C6D9F30074FFCE /* 1-1.jpg in Resources */,
+				DC50C2F119C6D9F30074FFCE /* 5-6.jpg in Resources */,
+				DC50C2DC19C6D9F30074FFCE /* 3-3.jpg in Resources */,
+				DC50C2CE19C6D9F30074FFCE /* 1-7.jpg in Resources */,
+				DC50C2E319C6D9F30074FFCE /* 4-1.jpg in Resources */,
+				DC50C2DE19C6D9F30074FFCE /* 3-5.jpg in Resources */,
+				DC50C2D919C6D9F30074FFCE /* 2-9.jpg in Resources */,
+				DC50C2CA19C6D9F30074FFCE /* 1-3.jpg in Resources */,
+				DC50C2E219C6D9F30074FFCE /* 3-9.jpg in Resources */,
+				DC50C2CB19C6D9F30074FFCE /* 1-4.jpg in Resources */,
+				DC50C2DB19C6D9F30074FFCE /* 3-2.jpg in Resources */,
+				DC50C2E819C6D9F30074FFCE /* 4-6.jpg in Resources */,
+				DC50C2D419C6D9F30074FFCE /* 2-4.jpg in Resources */,
+				DC50C2EB19C6D9F30074FFCE /* 4-9.jpg in Resources */,
+				DC50C2EC19C6D9F30074FFCE /* 5-1.jpg in Resources */,
+				DC50C2D519C6D9F30074FFCE /* 2-5.jpg in Resources */,
+				DC50C2DF19C6D9F30074FFCE /* 3-6.jpg in Resources */,
+				DC50C2F419C6D9F30074FFCE /* 5-9.jpg in Resources */,
 				DC2B122619BC2DA9001FE1C5 /* InfoPlist.strings in Resources */,
+				DC50C2D219C6D9F30074FFCE /* 2-2.jpg in Resources */,
+				DC50C2E619C6D9F30074FFCE /* 4-4.jpg in Resources */,
+				DC50C2F019C6D9F30074FFCE /* 5-5.jpg in Resources */,
+				DC50C2E019C6D9F30074FFCE /* 3-7.jpg in Resources */,
+				DC50C2E919C6D9F30074FFCE /* 4-7.jpg in Resources */,
+				DC50C2D019C6D9F30074FFCE /* 1-9.jpg in Resources */,
+				DC50C2DD19C6D9F30074FFCE /* 3-4.jpg in Resources */,
 				DC2B122F19BC2DA9001FE1C5 /* Main.storyboard in Resources */,
+				DC50C2D619C6D9F30074FFCE /* 2-6.jpg in Resources */,
+				DC50C2E519C6D9F30074FFCE /* 4-3.jpg in Resources */,
+				DC50C2ED19C6D9F30074FFCE /* 5-2.jpg in Resources */,
+				DC50C2D119C6D9F30074FFCE /* 2-1.jpg in Resources */,
+				DC50C2CF19C6D9F30074FFCE /* 1-8.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,15 +454,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B5395BFDE7545A89A068FA6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-TheEarthMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93B91B33F574CFA9481F653 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC2B121419BC2DA9001FE1C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DC2B123219BC2DA9001FE1C5 /* ViewController.m in Sources */,
+				DCAA51DC19C2AF36000E5587 /* DetailViewController2.m in Sources */,
 				DC2B122C19BC2DA9001FE1C5 /* AppDelegate.m in Sources */,
 				DC2B122819BC2DA9001FE1C5 /* main.m in Sources */,
-				DCD05A7319C1EAF60052CFB4 /* 2DetailViewController.m in Sources */,
 				DC54339019C0857200EC99BC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +618,7 @@
 		};
 		DC2B124B19BC2DA9001FE1C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1020EC4094DF46649312F67A /* Pods-TheEarthMap.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -402,6 +632,7 @@
 		};
 		DC2B124C19BC2DA9001FE1C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1020EC4094DF46649312F67A /* Pods-TheEarthMap.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

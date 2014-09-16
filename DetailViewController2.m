@@ -1,18 +1,18 @@
 //
-//  2DetailViewController.m
+//  DetailViewController2.m
 //  TheEarthMap
 //
-//  Created by Ken Harada on 2014/09/11.
+//  Created by Ken Harada on 2014/09/12.
 //  Copyright (c) 2014年 Ken Harada. All rights reserved.
 //
 
-#import "2DetailViewController.h"
+#import "DetailViewController2.h"
 
-@interface _DetailViewController ()
+@interface DetailViewController2 ()
 
 @end
 
-@implementation _DetailViewController
+@implementation DetailViewController2
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //戻るボタン
+    //self.navigationItem.title=@"Photos";
 }
 
 - (void)didReceiveMemoryWarning
