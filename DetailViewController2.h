@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController2 : UIViewController
+@property(nonatomic,assign) int photoselectnum;
+@property(nonatomic,assign) int countryselectnum;
+@property (weak, nonatomic) IBOutlet UIImageView *Photodetail;
 
 @end
