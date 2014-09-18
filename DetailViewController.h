@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailViewController2.h"
+#import "AppDelegate.h"
 
 
 @interface DetailViewController : UIViewController
+//画像に関係させる数字を送るグローバル変数
 @property(nonatomic,assign) int selectnum;
+
 @property (weak, nonatomic) IBOutlet UIImageView *Photo1;
 @property (weak, nonatomic) IBOutlet UIImageView *Photo2;
 @property (weak, nonatomic) IBOutlet UIImageView *Photo3;

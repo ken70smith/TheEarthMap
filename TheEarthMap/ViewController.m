@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+{
+    UIButton *_menuButton;
+}
 
 @end
 
@@ -20,8 +23,9 @@
     MKMapView *mapView =[[MKMapView alloc]init];
     mapView.delegate=self;
     //mapオブジェクトを生成
+    //(x,y,幅、高さ)
+    mapView.frame=CGRectMake(0,0,320,self.view.bounds.size.height);
     
-    mapView.frame=CGRectMake(0,50,540,540);
     //0,20,540,460初期値
     //大きさ位置を決定
     
@@ -38,8 +42,23 @@
     //MKMapTypeSatellite...上空写真
     //地図の種類を設定
     
-    [self.view addSubview:mapView];
+    _menuButton=[[UIButton alloc] initWithFrame:CGRectMake(280, 508, 40, 20)];
+    [_menuButton setTitle:@"Tap" forState:UIControlStateNormal];
+    [_menuButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_menuButton];
+    
     //表示するためのViewに追加
+    [self.view addSubview:mapView];
+    
+    
+    
+    
+    //navigationの上の白いバーを消す
+    self.navigationController.navigationBarHidden=YES;
+    
+    
+    
+    //マップの名前を英語表記にする。英語がわからない人のためにサブタイトルを日本語表記にする。
     
     MKPointAnnotation *pin =[self createdPin:CLLocationCoordinate2DMake(11.544873,104.892167) title:@"カンボジア"];
     [mapView addAnnotation:pin];
@@ -80,7 +99,7 @@
     MKPointAnnotation *pin11 =[self createdPin:CLLocationCoordinate2DMake(39.92077,32.85411) title:@"トルコ"];
     [mapView addAnnotation:pin11];
     
-    MKPointAnnotation *pin12 =[self createdPin:CLLocationCoordinate2DMake(-0.180653,-78.467838) title:@"エクアドル"];
+    MKPointAnnotation *pin12 =[self createdPin:CLLocationCoordinate2DMake(-12.046374,-77.042793) title:@"ペルー"];
     [mapView addAnnotation:pin12];
     
     MKPointAnnotation *pin13 =[self createdPin:CLLocationCoordinate2DMake(39.55,116.23) title:@"中国"];
@@ -114,17 +133,26 @@
     MKPointAnnotation *pin22 =[self createdPin:CLLocationCoordinate2DMake(31.956578,35.945695) title:@"ネパール"];
     [mapView addAnnotation:pin22];
     
-    MKPointAnnotation *pin23 =[self createdPin:CLLocationCoordinate2DMake(47.92,106.92) title:@"モンゴル"];
+    MKPointAnnotation *pin23 =[self createdPin:CLLocationCoordinate2DMake(15.369445,44.191007) title:@"イエメン"];
     [mapView addAnnotation:pin23];
     
-    MKPointAnnotation *pin24 =[self createdPin:CLLocationCoordinate2DMake(36.752887,3.042048) title:@"アルジェリア"];
+    MKPointAnnotation *pin24 =[self createdPin:CLLocationCoordinate2DMake(-17.863889,31.029722) title:@"ジンバブエ"];
     [mapView addAnnotation:pin24];
     
-    MKPointAnnotation *pin25 =[self createdPin:CLLocationCoordinate2DMake(5.55,-0.2) title:@"ガーナ"];
+    MKPointAnnotation *pin25 =[self createdPin:CLLocationCoordinate2DMake(-41.28646,174.776236) title:@"ニュージーランド"];
     [mapView addAnnotation:pin25];
     
-    MKPointAnnotation *pin26 =[self createdPin:CLLocationCoordinate2DMake(31.956578,35.945695) title:@"ヨルダン"];
+    MKPointAnnotation *pin26 =[self createdPin:CLLocationCoordinate2DMake(-34.603723,-58.381593) title:@"アルゼンチン"];
     [mapView addAnnotation:pin26];
+    
+    MKPointAnnotation *pin27 =[self createdPin:CLLocationCoordinate2DMake(31.956578,35.945695) title:@"ヨルダン"];
+    [mapView addAnnotation:pin27];
+    
+    MKPointAnnotation *pin28 =[self createdPin:CLLocationCoordinate2DMake(30.04442,31.235712) title:@"エジプト"];
+    [mapView addAnnotation:pin28];
+    
+    MKPointAnnotation *pin29 =[self createdPin:CLLocationCoordinate2DMake(-0.180653,-78.467838) title:@"エクアドル"];
+    [mapView addAnnotation:pin29];
 
 
 
@@ -136,8 +164,8 @@
 }
 
 // pinをたてる自作メソッド
-    -(MKPointAnnotation *)createdPin:(CLLocationCoordinate2D)co title:(NSString *)title {
-        
+-(MKPointAnnotation *)createdPin:(CLLocationCoordinate2D)co title:(NSString *)title {
+    
    
         MKPointAnnotation *pin=[[MKPointAnnotation alloc]init];
         
@@ -145,8 +173,10 @@
         
         pin.title=title;
         
-        
-        return pin;
+      // pin.subtitle= subtitle;もつけれるよ
+    
+    
+    return pin;
     
 	}
 
@@ -197,30 +227,110 @@
     if ([view.annotation.title isEqualToString:@"フランス"]) {
         DetailViewController.selectnum=4;
     }
-
-
+    
     if ([view.annotation.title isEqualToString:@"イタリア"]) {
         DetailViewController.selectnum=5;
     }
+    if ([view.annotation.title isEqualToString:@"フィンランド"]) {
+        DetailViewController.selectnum=6;
+    }
+    if ([view.annotation.title isEqualToString:@"カナダ"]) {
+        DetailViewController.selectnum=7;
+    }
+    if ([view.annotation.title isEqualToString:@"オーストラリア"]) {
+        DetailViewController.selectnum=8;
+    }
+    if ([view.annotation.title isEqualToString:@"スペイン"]) {
+        DetailViewController.selectnum=9;
+    }
+    if ([view.annotation.title isEqualToString:@"インド"]) {
+        DetailViewController.selectnum=10;
+    }
+    if ([view.annotation.title isEqualToString:@"トルコ"]) {
+        DetailViewController.selectnum=11;
+    }
     
+    if ([view.annotation.title isEqualToString:@"ペルー"]) {
+        DetailViewController.selectnum=12;
+    }
+    if ([view.annotation.title isEqualToString:@"中国"]) {
+        DetailViewController.selectnum=13;
+    }
+    if ([view.annotation.title isEqualToString:@"ロシア"]) {
+        DetailViewController.selectnum=14;
+    }
+    if ([view.annotation.title isEqualToString:@"南アフリカ"]) {
+        DetailViewController.selectnum=15;
+    }
+    if ([view.annotation.title isEqualToString:@"ブラジル"]) {
+        DetailViewController.selectnum=16;
+    }
+    if ([view.annotation.title isEqualToString:@"アメリカ"]) {
+        DetailViewController.selectnum=17;
+    }
+    if ([view.annotation.title isEqualToString:@"日本"]) {
+        DetailViewController.selectnum=18;
+    }
+    if ([view.annotation.title isEqualToString:@"メキシコ"]) {
+        DetailViewController.selectnum=19;
+    }
+
+    if ([view.annotation.title isEqualToString:@"ケニア"]) {
+        DetailViewController.selectnum=20;
+    }
+    if ([view.annotation.title isEqualToString:@"フィリピン"]) {
+        DetailViewController.selectnum=21;
+    }
+    if ([view.annotation.title isEqualToString:@"ネパール"]) {
+        DetailViewController.selectnum=22;
+    }
+    if ([view.annotation.title isEqualToString:@"イエメン"]) {
+        DetailViewController.selectnum=23;
+    }
+    if ([view.annotation.title isEqualToString:@"ジンバブエ"]) {
+        DetailViewController.selectnum=24;
+    }
+    if ([view.annotation.title isEqualToString:@"ニュージーランド"]) {
+        DetailViewController.selectnum=25;
+    }
+    if ([view.annotation.title isEqualToString:@"アルゼンチン"]) {
+        DetailViewController.selectnum=26;
+    }
+    if ([view.annotation.title isEqualToString:@"ヨルダン"]) {
+        DetailViewController.selectnum=27;
+    }
+    if ([view.annotation.title isEqualToString:@"エジプト"]) {
+        DetailViewController.selectnum=28;
+    }
+    if ([view.annotation.title isEqualToString:@"エクアドル"]) {
+        DetailViewController.selectnum=29;
+    }
     
-    
+
+
     [[self navigationController]pushViewController:DetailViewController animated:YES];
     //この３行で１→２に画面遷移する
     
-  
 
-    
-    
-    
-    
-   
     
 
     
     
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+
+    self.navigationController.navigationBarHidden=YES;
+
+}
+
+-(void)tapBtn:(UIButton *)menuButton_tmp
+{
+    NSLog(@"Tap");
     
+
+
+}
 
 
 - (void)didReceiveMemoryWarning

@@ -11,5 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+//countrylistを使うという宣言をappdelegateで。なぜならcountryはすべての場所で使うため
+@property(strong,nonatomic) NSArray *countrylist;
 
 @end
