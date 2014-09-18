@@ -30,7 +30,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.countrylist=@[@"カンボジア",@"イスラエル",@"ボリビア",@"フランス",@"イタリア",@"フィンランド",@"カナダ",@"オーストラリア",@"スペイン",@"インド",@"トルコ",@"ペルー",@"中国",@"ロシア",@"南アフリカ",@"ブラジル",@"アメリカ",@"日本",@"メキシコ",@"ケニア",@"フィリピン",@"ネパール",@"イエメン",@"ジンバブエ",@"ニュージーランド",@"アルゼンチン",@"ヨルダン"];
+    self.countrylist=@[@"カンボジア",@"イスラエル",@"ボリビア",@"フランス",@"イタリア",@"フィンランド",@"カナダ",@"オーストラリア",@"スペイン",@"インド",@"トルコ",@"ペルー",@"中国",@"ロシア",@"南アフリカ",@"ブラジル",@"アメリカ",@"日本",@"メキシコ",@"ケニア",@"フィリピン",@"ネパール",@"イエメン",@"ジンバブエ",@"ニュージーランド",@"アルゼンチン",@"ヨルダン",@"エジプト",@"エクアドル"];
     UIStoryboard *mainStoryBoard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UINavigationController *navigationcontroller= [mainStoryBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
     
