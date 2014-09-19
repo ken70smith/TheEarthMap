@@ -42,10 +42,11 @@
     //MKMapTypeSatellite...上空写真
     //地図の種類を設定
     
-    _menuButton=[[UIButton alloc] initWithFrame:CGRectMake(280, 508, 40, 20)];
+    _menuButton=[[UIButton alloc] initWithFrame:CGRectMake(30,40, 40, 20)];
+    [_menuButton setTitleColor:[UIColor colorWithRed:0.492157 green:0.760784 blue:0.52941 alpha:1.0] forState:UIControlStateNormal];
     [_menuButton setTitle:@"Tap" forState:UIControlStateNormal];
     [_menuButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_menuButton];
+    [mapView addSubview:_menuButton];
     
     //表示するためのViewに追加
     [self.view addSubview:mapView];
