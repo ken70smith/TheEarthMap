@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CountryListViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+{
+    CountryListViewController *tableViewController;
+}
+
+
 
 @property (strong, nonatomic) UIWindow *window;
 //countrylistを使うという宣言をappdelegateで。なぜならcountryはすべての場所で使うため
 @property(strong,nonatomic) NSArray *countrylist;
 
 @end
+
+//@class ViewController;
+

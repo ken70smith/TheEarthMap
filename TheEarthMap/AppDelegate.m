@@ -13,6 +13,35 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    self.countrylist=@[@"カンボジア",@"イスラエル",@"ボリビア",@"フランス",@"イタリア",@"フィンランド",@"カナダ",@"オーストラリア",@"スペイン",@"インド",@"トルコ",@"ペルー",@"中国",@"ロシア",@"南アフリカ",@"ブラジル",@"アメリカ",@"日本",@"メキシコ",@"ケニア",@"フィリピン",@"ネパール",@"イエメン",@"ジンバブエ",@"ニュージーランド",@"アルゼンチン",@"ヨルダン",@"エジプト",@"エクアドル",@"モルディブ",@"ギリシャ",@"ベトナム",@"タイ"];
+    UIStoryboard *mainStoryBoard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *navigationcontroller= [mainStoryBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    
+    UIViewController *leftSideMenuController=[mainStoryBoard instantiateViewControllerWithIdentifier:@"CountryListViewController"];
+    
+    
+    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                    containerWithCenterViewController:navigationcontroller
+                                                    leftMenuViewController:leftSideMenuController
+                                                    rightMenuViewController:nil];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    tableViewController = [[CountryListViewController alloc]init];
+    
+    // テーブルビューコントローラのビューをウィンドウに貼付ける
+    [self.window addSubview:tableViewController.view];
+    
+    self.window.rootViewController = container;
+    
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+}
+
 -(ViewController *)demoController{
 
     UIStoryboard *mainStoryBord =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -28,23 +57,6 @@
 
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.countrylist=@[@"カンボジア",@"イスラエル",@"ボリビア",@"フランス",@"イタリア",@"フィンランド",@"カナダ",@"オーストラリア",@"スペイン",@"インド",@"トルコ",@"ペルー",@"中国",@"ロシア",@"南アフリカ",@"ブラジル",@"アメリカ",@"日本",@"メキシコ",@"ケニア",@"フィリピン",@"ネパール",@"イエメン",@"ジンバブエ",@"ニュージーランド",@"アルゼンチン",@"ヨルダン",@"エジプト",@"エクアドル"];
-    UIStoryboard *mainStoryBoard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UINavigationController *navigationcontroller= [mainStoryBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
-    
-    UIViewController *leftSideMenuController=[mainStoryBoard instantiateViewControllerWithIdentifier:@"CountryListViewController"];
-    
-    
-    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
-                                                    containerWithCenterViewController:navigationcontroller
-                                                    leftMenuViewController:leftSideMenuController
-                                                    rightMenuViewController:nil];
-    self.window.rootViewController = container;
-    [self.window makeKeyAndVisible];
-    return YES;
-}
 
 
 							

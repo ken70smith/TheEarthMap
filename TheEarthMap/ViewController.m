@@ -11,6 +11,11 @@
 @interface ViewController ()
 {
     UIButton *_menuButton;
+    ADBannerView *_adView;
+    BOOL _isVisible;
+    //バナーを出すよ。上がバナー広告の変数。下は正しく出されているかを判別
+    
+
 }
 
 @end
@@ -48,14 +53,34 @@
     [_menuButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
     [mapView addSubview:_menuButton];
     
+    
+    
+    //画像を円形にトリミング
+//    UIImage *circleImage = [UIImage imageNamed:@"1-1.jpg"];
+//    self.CirclePhoto.image = circleImage;
+//    if (circleImage.size.width != circleImage.size.height) {
+//        CGFloat smallerSideLength = (circleImage.size.width < circleImage.size.height) ? circleImage.size.width : circleImage.size.height;
+//        self.CirclePhoto.frame = CGRectMake((circleImage.size.width - smallerSideLength) * 0.5f,
+//                                           (circleImage.size.height - smallerSideLength) * 0.5f,
+//                                           circleImage.size.width, circleImage.size.height);
+//    } else {
+//        self.CirclePhoto.frame = CGRectMake(0.0f, 0.0f, circleImage.size.width, circleImage.size.height);
+//    }
+//    self.CirclePhoto.layer.cornerRadius = self.CirclePhoto.frame.size.width * 0.5f;
+//    self.CirclePhoto.clipsToBounds = YES;
+//    //[self addSubview:circleImageView];
+//    [mapView addSubview:self.CirclePhoto];
+    
+    
+    //navigationの上の白いバーを消す
+    self.navigationController.navigationBarHidden=YES;
+
+    
     //表示するためのViewに追加
     [self.view addSubview:mapView];
     
     
     
-    
-    //navigationの上の白いバーを消す
-    self.navigationController.navigationBarHidden=YES;
     
     
     
@@ -131,7 +156,7 @@
     MKPointAnnotation *pin21 =[self createdPin:CLLocationCoordinate2DMake(14.599512,120.984219) title:@"フィリピン"];
     [mapView addAnnotation:pin21];
     
-    MKPointAnnotation *pin22 =[self createdPin:CLLocationCoordinate2DMake(31.956578,35.945695) title:@"ネパール"];
+    MKPointAnnotation *pin22 =[self createdPin:CLLocationCoordinate2DMake(27.7,85.333333) title:@"ネパール"];
     [mapView addAnnotation:pin22];
     
     MKPointAnnotation *pin23 =[self createdPin:CLLocationCoordinate2DMake(15.369445,44.191007) title:@"イエメン"];
@@ -154,6 +179,18 @@
     
     MKPointAnnotation *pin29 =[self createdPin:CLLocationCoordinate2DMake(-0.180653,-78.467838) title:@"エクアドル"];
     [mapView addAnnotation:pin29];
+    
+    MKPointAnnotation *pin30 =[self createdPin:CLLocationCoordinate2DMake(4.175278,73.508889) title:@"モルディブ"];
+    [mapView addAnnotation:pin30];
+    
+    MKPointAnnotation *pin31 =[self createdPin:CLLocationCoordinate2DMake(37.983917,23.72936) title:@"ギリシャ"];
+    [mapView addAnnotation:pin31];
+    
+    MKPointAnnotation *pin32 =[self createdPin:CLLocationCoordinate2DMake(21.033333,105.85) title:@"ベトナム"];
+    [mapView addAnnotation:pin32];
+    MKPointAnnotation *pin33 =[self createdPin:CLLocationCoordinate2DMake(13.727896,100.524124) title:@"タイ"];
+    [mapView addAnnotation:pin33];
+    
 
 
 
@@ -162,6 +199,17 @@
     
                              
     [mapView addAnnotation:pin];
+    
+    //バナーオブジェクトの生成
+    _adView=[[ADBannerView alloc]initWithFrame:CGRectMake(0, -_adView.frame.size.height,_adView.frame.size.width,_adView.frame.size.height)];
+    
+    _adView.delegate=self;
+    
+    [self.view addSubview:_adView];
+    //表示をさせるコード。部品を追加するイメージ
+    _adView.alpha=0.0;
+    //最初はバナーが表示されてないのでno
+    _isVisible= NO;
 }
 
 // pinをたてる自作メソッド
@@ -199,9 +247,9 @@
         //iボタンを押した時画面が反応する為のコード
         pinView.canShowCallout=YES;
         
-//        UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//        pinView.rightCalloutAccessoryView = rightButton;
-//        
+        UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        pinView.rightCalloutAccessoryView = rightButton;
+        
        pinView.rightCalloutAccessoryView=[UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         
     }
@@ -306,16 +354,34 @@
     if ([view.annotation.title isEqualToString:@"エクアドル"]) {
         DetailViewController.selectnum=29;
     }
+    if ([view.annotation.title isEqualToString:@"モルディブ"]) {
+        DetailViewController.selectnum=30;
+    }
+    if ([view.annotation.title isEqualToString:@"ギリシャ"]) {
+        DetailViewController.selectnum=31;
+    }
+    if ([view.annotation.title isEqualToString:@"ベトナム"]) {
+        DetailViewController.selectnum=32;
+    }
+    if ([view.annotation.title isEqualToString:@"タイ"]) {
+        DetailViewController.selectnum=33;
+        //写真の追加から
+        
+    }
+
     
 
 
     [[self navigationController]pushViewController:DetailViewController animated:YES];
+    
     //この３行で１→２に画面遷移する
     
 
     
 
-    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"Country";
+    self.navigationItem.backBarButtonItem = barButton;
     
 }
 
@@ -329,10 +395,27 @@
 {
     NSLog(@"Tap");
     
+    [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
+    
 
 
 }
-
+//バナーが表示させる時発動するメソッド
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    if (!_isVisible) {
+        //バナーが表示されるアニメーション
+        [UIView beginAnimations:@"animationAdBannerOn" context:nil];
+        
+        [UIView setAnimationDuration:0.3];
+        //animationの表示される時間０．３秒
+        banner.frame= CGRectOffset(banner.frame, 0, self.view.frame.size.height-self.view.frame.size.height/11.5);
+        banner.alpha=1.0;
+        [UIView commitAnimations];
+        
+        _isVisible=YES;
+        
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CountryListViewController : UIViewController
+@interface CountryListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+{
+    NSArray *sectionList;
+    NSDictionary *dataSource;
+}
+@property (weak, nonatomic) IBOutlet UITableView *CountryView;
+
+
 
 @end
+

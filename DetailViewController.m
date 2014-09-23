@@ -26,9 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //navigationbarの表示を許可している
      self.navigationController.navigationBarHidden=NO;
-    [self dismissViewControllerAnimated:YES completion:nil];
-    //戻るボタン
+    
+    //現在のページの戻るボタンを生成するメソッド（これは何の意味）
+   [self dismissViewControllerAnimated:YES completion:nil];
+    //戻るボタン（次のページのボタンの設定）
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"Back";
+    self.navigationItem.backBarButtonItem = barButton;
+    
+    
     //appdelegateobjectのインスタンス化。変数として変換。
     AppDelegate *appDelegate=(AppDelegate *)[[UIApplication sharedApplication] delegate];
     
