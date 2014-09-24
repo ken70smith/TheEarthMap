@@ -15,6 +15,9 @@
     BOOL _isVisible;
     //バナーを出すよ。上がバナー広告の変数。下は正しく出されているかを判別
     
+    int _slidePhotoCounter;
+    int _slideCountryCounter;
+    BOOL _stopAnimeFlag;
 
 }
 
@@ -52,25 +55,6 @@
     [_menuButton setTitle:@"Tap" forState:UIControlStateNormal];
     [_menuButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
     [mapView addSubview:_menuButton];
-    
-    
-    
-    //画像を円形にトリミング
-//    UIImage *circleImage = [UIImage imageNamed:@"1-1.jpg"];
-//    self.CirclePhoto.image = circleImage;
-//    if (circleImage.size.width != circleImage.size.height) {
-//        CGFloat smallerSideLength = (circleImage.size.width < circleImage.size.height) ? circleImage.size.width : circleImage.size.height;
-//        self.CirclePhoto.frame = CGRectMake((circleImage.size.width - smallerSideLength) * 0.5f,
-//                                           (circleImage.size.height - smallerSideLength) * 0.5f,
-//                                           circleImage.size.width, circleImage.size.height);
-//    } else {
-//        self.CirclePhoto.frame = CGRectMake(0.0f, 0.0f, circleImage.size.width, circleImage.size.height);
-//    }
-//    self.CirclePhoto.layer.cornerRadius = self.CirclePhoto.frame.size.width * 0.5f;
-//    self.CirclePhoto.clipsToBounds = YES;
-//    //[self addSubview:circleImageView];
-//    [mapView addSubview:self.CirclePhoto];
-    
     
     //navigationの上の白いバーを消す
     self.navigationController.navigationBarHidden=YES;
@@ -388,6 +372,17 @@
 -(void)viewWillAppear:(BOOL)animated{
 
     self.navigationController.navigationBarHidden=YES;
+    
+    _slidePhotoCounter=1;
+    //ランダムで１から２９の数値をチョイスする
+    
+    //大きい数を２９で割ると０から２８の余りができる。そこに＋１を足すことで１から２９までの数字が表現可能になる
+    _slidePhotoCounter=rand()%29+ 1;
+    
+    _stopAnimeFlag= NO;
+    
+    [self slideAnimaton];
+    
 
 }
 
@@ -416,6 +411,84 @@
         
     }
 }
+
+
+-(void)animationDidStop:(NSString *)animationID finished:(NSNumber *) finished context:(void *)context
+{
+
+    _slidePhotoCounter +=1;
+    
+    if (_slidePhotoCounter >= 10) {
+        _slidePhotoCounter =1;
+        _slideCountryCounter +=1;
+    }
+
+    if (_slideCountryCounter >=30) {
+        _slideCountryCounter =1;
+    }
+
+    NSLog(@"%d",_slideCountryCounter);
+    
+    if (!_stopAnimeFlag) {
+        [self slideAnimaton];
+    }
+
+
+
+
+
+
+
+
+}
+-(void)slideAnimaton{
+    //画像を円形にトリミング
+    UIImage *circleImage = [UIImage imageNamed:[NSString stringWithFormat:@"%d-%d.jpg",_slideCountryCounter,_slidePhotoCounter]];
+    UIImageView *circleImageView =[[UIImageView alloc] initWithImage:circleImage];
+    //位置座標
+    circleImageView.frame=CGRectMake(self.view.bounds.size.width-130, self.view.bounds.size.height-130, 120, 120);
+    //丸くなる一文
+    circleImageView.layer.cornerRadius=circleImageView.frame.size.width *0.5f;
+    circleImageView.clipsToBounds=YES;
+    
+    [self.view addSubview:circleImageView];
+    circleImageView.alpha=0.0;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDelegate:self];
+    //animeの秒数
+    [UIView setAnimationDuration:3.0f];
+    circleImageView.alpha=0.0;
+    circleImageView.alpha=1.0;
+    
+    if (!_stopAnimeFlag) {
+        //アニメーション
+        [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+        
+    }
+    [UIView commitAnimations];
+    
+    
+    
+    //
+    //    self.CirclePhoto.image = circleImage;
+    //    if (circleImage.size.width != circleImage.size.height) {
+    //        CGFloat smallerSideLength = (circleImage.size.width < circleImage.size.height) ? circleImage.size.width : circleImage.size.height;
+    //        self.CirclePhoto.frame = CGRectMake((circleImage.size.width - smallerSideLength) * 0.5f,
+    //                                           (circleImage.size.height - smallerSideLength) * 0.5f,
+    //                                           circleImage.size.width, circleImage.size.height);
+    //    } else {
+    //        self.CirclePhoto.frame = CGRectMake(0.0f, 0.0f, circleImage.size.width, circleImage.size.height);
+    //    }
+    //    self.CirclePhoto.layer.cornerRadius = self.CirclePhoto.frame.size.width * 0.5f;
+    //    self.CirclePhoto.clipsToBounds = YES;
+    //    //[self addSubview:circleImageView];
+    //    [mapView addSubview:self.CirclePhoto];
+    //    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
