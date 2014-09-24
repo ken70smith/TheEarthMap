@@ -114,7 +114,9 @@
                           @"27-1":@"アムラ城内部",@"27-2":@"ワディラム保護区",@"27-3":@"ペトラ遺跡にて",@"27-4":@"ペトラ遺跡",@"27-5":@"ペトラ遺跡",@"27-6":@"ペトラ遺跡",@"27-7":@"ウルエル・ラサス",@"27-8":@"ワディラム保護区",@"27-9":@"アムラ城",
                           @"28-1":@"ハーン・ハリーリ市場",@"28-2":@"テーベ・カルナック神殿",@"28-3":@"ツタンカーメン・エジプト考古学博物舘",@"28-4":@"カイロの風景",@"28-5":@"ピラミッド",@"28-6":@"ハトシェプスト女王葬祭殿",@"28-7":@"古代都市テーベとその墓地遺跡",@"28-8":@"ハトシェプスト女王葬祭殿",@"28-9":@"死者の町",
                           @"29-1":@"サンガイ国立公園",@"29-2":@"サンタ・アナ・デ・ロス・リオス・クエンカ",@"29-3":@"ガラパゴス諸島",@"29-4":@"ガラパゴス諸島",@"29-5":@"織物屋の店主",@"29-6":@"ガラパゴス諸島",@"29-7":@"サンガイ国立公園",@"29-8":@"ガラパゴス諸島",@"29-9":@"ガラパゴス諸島",
-                          @"30-1":@"",};
+                          @"30-1":@"モルディブ諸島の全景",@"30-2":@"モルディブ",@"30-3":@"海上ホテル",@"30-4":@"モルディブ諸島",@"30-5":@"モルディブのビーチ",@"30-6":@"モルディブの全景",@"30-7":@"夕日のモルディブ諸島",@"30-8":@"モルディブ諸島の海",@"30-9":@"モルディブ諸島",
+                          @"31-1":@"ドン・パヤーイェン‐カオ・ヤイ森林群",@"31-2":@"古代都市アユタヤ", @"31-3":@"古代都市アユタヤ", @"31-4":@"ドン・パヤーイェン‐カオ・ヤイ森林群", @"31-5":@"古代都市スコタイ、ワット・シーチェム", @"31-6":@"古代都市アユタヤ", @"31-7":@"古代都市スコタイ" ,@"31-8":@"ドン・パヤーイェン‐カオ・ヤイ森林群" ,@"31-9":@"ドン・パヤーイェン‐カオ・ヤイ森林群",
+                          @"32-1":@"ハロン湾",@"32-2":@"ハロン湾",@"32-3":@"フォンニャ-ケバン国立公園",@"32-4":@"",@"32-5":@"フエの建造物",@"32-6":@"フォンニャ-ケバン国立公園",@"32-7":@"フエの建造物",@"32-8":@"フォンニャ-ケバン国立公園",@"32-9":@"フエの建造物の鯉",};
     
     
     
@@ -126,4 +128,47 @@
     }
 
 
+- (IBAction)ShareBtn:(id)sender {
+    
+    //宣言
+    UIImage *shareImage;
+    //箱詰め
+    shareImage=[self screenshotWithView:self.PhotoView];
+    //ActivityViewに渡す情報を配列に格納
+    NSArray *actItems =@[shareImage];
+    //ActivityViewの生成
+    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:actItems applicationActivities:nil];
+    //modal処理でActivityViewを表示
+    [self presentViewController:activityView animated:YES completion:nil];
+}
+
+//スクリーンショットを取る
+- (UIImage *)screenshotWithView:(UIView *)shareView
+{
+    CGSize imageSize = [shareView bounds].size;
+    if (NULL != UIGraphicsBeginImageContextWithOptions)
+        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    else
+        UIGraphicsBeginImageContext(imageSize);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, [shareView center].x, [shareView center].y);
+    CGContextConcatCTM(context, [shareView transform]);
+    CGContextTranslateCTM(context,
+                          -[shareView bounds].size.width * [[shareView layer] anchorPoint].x - shareView.frame.origin.x,
+                          -[shareView bounds].size.height * [[shareView layer] anchorPoint].y - shareView.frame.origin.y);
+    
+    [[shareView layer] renderInContext:context];
+    
+    CGContextRestoreGState(context);
+    
+    // Retrieve the screenshot image
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+
+}
 @end

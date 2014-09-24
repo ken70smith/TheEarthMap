@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewController2.h"
 #import "AppDelegate.h"
+#import <iAd/iAd.h>
 
 
 @interface DetailViewController : UIViewController

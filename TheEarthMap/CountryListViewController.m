@@ -146,6 +146,13 @@
     // セルにテキストを設定
     cell.textLabel.text = [items objectAtIndex:indexPath.row];
     
+    //cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    
+    cell.backgroundColor=[UIColor colorWithRed:0.598 green:0.865 blue:1.00 alpha:1.0f];
+    
+//R:68 G:111 B:229
+    
+    
     return cell;
 }
 
@@ -269,7 +276,8 @@
         DetailViewController.selectnum=33;
         //写真の追加から
     }
-    
+    [[self navigationController]pushViewController:DetailViewController animated:YES];
+    //[self presentViewController:DetailViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

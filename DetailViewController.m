@@ -9,6 +9,10 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+{
+ ADBannerView *_adView;
+ BOOL _isVisible;
+}
 
 @end
 
