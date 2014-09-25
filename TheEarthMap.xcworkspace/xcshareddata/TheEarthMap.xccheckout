@@ -10,29 +10,29 @@
 	<string>TheEarthMap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E3790928-7CB5-44EA-BEB6-A6DE443BB6F3</key>
+		<key>0E2D88C5DAD6031787F448F7EAFC20ED525C4AA2</key>
 		<string>https://github.com/ken70smith/TheEarthMap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TheEarthMap.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E3790928-7CB5-44EA-BEB6-A6DE443BB6F3</key>
+		<key>0E2D88C5DAD6031787F448F7EAFC20ED525C4AA2</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ken70smith/TheEarthMap.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E3790928-7CB5-44EA-BEB6-A6DE443BB6F3</string>
+	<string>0E2D88C5DAD6031787F448F7EAFC20ED525C4AA2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E3790928-7CB5-44EA-BEB6-A6DE443BB6F3</string>
+			<string>0E2D88C5DAD6031787F448F7EAFC20ED525C4AA2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TheEarthMap</string>
 		</dict>

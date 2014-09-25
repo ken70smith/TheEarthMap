@@ -8,6 +8,7 @@
 
 #import "CountryListViewController.h"
 #import "DetailViewController.h"
+#import "MFSideMenu.h"
 
 
 @interface CountryListViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -298,7 +299,14 @@
         DetailViewController.selectnum=33;
         //写真の追加から
     }
-    [[self navigationController]pushViewController:DetailViewController animated:YES];
+    
+   [[self navigationController]pushViewController:DetailViewController animated:YES];
+    
+     UINavigationController *navigationController= self.menuContainerViewController.centerViewController;
+    
+    [navigationController pushViewController:DetailViewController animated:YES];
+    [self.menuContainerViewController toggleLeftSideMenuCompletion:^{}];
+    
     //[self presentViewController:DetailViewController animated:YES completion:nil];
 }
 
