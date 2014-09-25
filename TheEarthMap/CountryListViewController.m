@@ -48,8 +48,26 @@
     NSArray *datas = [NSArray arrayWithObjects:asia,eorope,africa,north,south,oseania,Other,nil];
     
     dataSource = [NSDictionary dictionaryWithObjects:datas forKeys:sectionList];
-}
     
+    
+    
+    // UITableViewの背景色を無色にする。
+    //[self.CountryView setBackgroundColor:[UIColor clearColor]];
+    
+    // 背景画像でUIImageViewを生成する。
+    UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    
+    // 背景画像のサイズをUITableViewのサイズに合わせる。
+    [bgView setFrame:self.CountryView.frame];
+    bgView.alpha=0.7;
+    
+    
+    
+    // UIImageViewをUITableViewの背景画像に設定する。
+    [self.CountryView setBackgroundView:bgView];
+    
+}
+
 
 
 ////セクション数
@@ -146,12 +164,16 @@
     // セルにテキストを設定
     cell.textLabel.text = [items objectAtIndex:indexPath.row];
     
+    [cell setBackgroundColor:[UIColor clearColor]];
+    
+    //cell.contentView.backgroundColor = [UIColor clearColor];
+    
     //cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.backgroundColor=[UIColor colorWithRed:0.598 green:0.865 blue:1.00 alpha:1.0f];
+    //背景色の設定
+    //cell.backgroundColor=[UIColor colorWithRed:0.598 green:0.865 blue:1.00 alpha:1.0f];
     
-//R:68 G:111 B:229
-    
+
     
     return cell;
 }

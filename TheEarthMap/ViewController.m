@@ -50,11 +50,11 @@
     //MKMapTypeSatellite...上空写真
     //地図の種類を設定
     
-    _menuButton=[[UIButton alloc] initWithFrame:CGRectMake(30,40, 40, 20)];
-    [_menuButton setTitleColor:[UIColor colorWithRed:0.492157 green:0.760784 blue:0.52941 alpha:1.0] forState:UIControlStateNormal];
-    [_menuButton setTitle:@"Tap" forState:UIControlStateNormal];
-    [_menuButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [mapView addSubview:_menuButton];
+//    _menuButton=[[UIButton alloc] initWithFrame:CGRectMake(30,40, 40, 20)];
+//    [_menuButton setTitleColor:[UIColor colorWithRed:0.492157 green:0.760784 blue:0.52941 alpha:1.0] forState:UIControlStateNormal];
+//    [_menuButton setTitle:@"Tap" forState:UIControlStateNormal];
+//    [_menuButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    [mapView addSubview:_menuButton];
     
     //navigationの上の白いバーを消す
     self.navigationController.navigationBarHidden=YES;
@@ -63,8 +63,17 @@
     //表示するためのViewに追加
     [self.view addSubview:mapView];
     
+    //ボタンの画像を入れる（これによって人の写真が入れれる）
+    UIImage *image = [UIImage imageNamed:@"man44.png"];
+    UIImageView *imageView=[[UIImageView alloc]initWithImage:image];
+    imageView.frame= CGRectMake(30,40, 50, 50);
+    imageView.alpha=1.0;
+    [mapView addSubview:imageView];
+    [imageView setUserInteractionEnabled:YES];
     
-    
+    UITapGestureRecognizer *recognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBtn:)];
+    [recognizer setNumberOfTapsRequired:1];
+    [imageView addGestureRecognizer:recognizer];
     
     
     
@@ -430,6 +439,7 @@
     NSLog(@"%d",_slideCountryCounter);
     
     if (!_stopAnimeFlag) {
+        
         [self slideAnimaton];
     }
 
@@ -446,7 +456,9 @@
     UIImage *circleImage = [UIImage imageNamed:[NSString stringWithFormat:@"%d-%d.jpg",_slideCountryCounter,_slidePhotoCounter]];
     UIImageView *circleImageView =[[UIImageView alloc] initWithImage:circleImage];
     //位置座標
-    circleImageView.frame=CGRectMake(self.view.bounds.size.width-130, self.view.bounds.size.height-130, 120, 120);
+    circleImageView.frame=CGRectMake(self.view.bounds.size.width-310,self.view.bounds.size.height-170, 120, 120);
+    //y,self.view.bounds.size.height-130   x,self.view.bounds.size.width-130
+    
     //丸くなる一文
     circleImageView.layer.cornerRadius=circleImageView.frame.size.width *0.5f;
     circleImageView.clipsToBounds=YES;
@@ -486,6 +498,14 @@
     //    [mapView addSubview:self.CirclePhoto];
     //    
     
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    NSLog(@"viewWillDisapper");
+    _stopAnimeFlag =YES;
+
+
 }
 
 

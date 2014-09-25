@@ -19,6 +19,5 @@
 
 
 @interface ViewController : UIViewController<MKMapViewDelegate,ADBannerViewDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *CirclePhoto;
 
 @end
