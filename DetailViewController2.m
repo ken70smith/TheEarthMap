@@ -8,10 +8,14 @@
 
 #import "DetailViewController2.h"
 
+
 @interface DetailViewController2 ()
 //dictionary型を定義.このdictionaryは国の説明と写真番号を記録
 {
     NSDictionary *_DetailDictionary;
+    //広告バナーのプロトコル
+    ADBannerView *_adView;
+    BOOL _isVisible;
 }
 
 @end
@@ -80,8 +84,22 @@
     
     //navigation barの色を変更する
     //self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    //バナーオブジェクトの生成
+//    _adView=[[ADBannerView alloc]initWithFrame:CGRectMake(0, -_adView.frame.size.height,_adView.frame.size.width,_adView.frame.size.height)];
+//    //delegateメゾットhに書くことによって使用可能になる
+//    _adView.delegate=self;
+//    
+//    [self.view addSubview:_adView];
+//    //表示をさせるコード。部品を追加するイメージ
+//    _adView.alpha=0.0;
+//    //最初はバナーが表示されてないのでno
+//    _isVisible= NO;
+    
+    
+    
     
 }
+
 //dictionaryの自作メソッド
 -(void)CreateDetailDictionary{
 //説明の追加のメソッド
@@ -171,4 +189,22 @@
     return image;
 
 }
+
+//広告バナーに関するメソッド
+//-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+//    if (!_isVisible) {
+//        //バナーが表示されるアニメーション
+//        [UIView beginAnimations:@"animationAdBannerOn" context:nil];
+//        
+//        [UIView setAnimationDuration:0.3];
+//        //animationの表示される時間０．３秒
+//        banner.frame= CGRectOffset(banner.frame, 0, self.view.frame.size.height-self.view.frame.size.height/11.5);
+//        banner.alpha=1.0;
+//        [UIView commitAnimations];
+//        
+//        _isVisible=YES;
+//        
+//    }
+
+
 @end

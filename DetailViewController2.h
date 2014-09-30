@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
+//広告バナーの追加のimportに書き込む
+#import <iAd/iAd.h>
 
-@interface DetailViewController2 : UIViewController
+@interface DetailViewController2 : UIViewController<UIWebViewDelegate,ADBannerViewDelegate>
 //selectnumを２つ設定する。countryとphotoの二種類ご用意
 @property(nonatomic,assign) int photoselectnum;
 @property(nonatomic,assign) int countryselectnum;

@@ -10,6 +10,7 @@
 
 @interface DetailViewController ()
 {
+ //広告バナーのプロトコル
  ADBannerView *_adView;
  BOOL _isVisible;
 }
@@ -58,6 +59,19 @@
     self.Photo7.image=[UIImage imageNamed:[NSString stringWithFormat:@"%d-7.jpg",_selectnum]];
     self.Photo8.image=[UIImage imageNamed:[NSString stringWithFormat:@"%d-8.jpg",_selectnum]];
     self.Photo9.image=[UIImage imageNamed:[NSString stringWithFormat:@"%d-9.jpg",_selectnum]];
+    
+    
+    //バナーオブジェクトの生成
+    _adView=[[ADBannerView alloc]initWithFrame:CGRectMake(0, -_adView.frame.size.height,_adView.frame.size.width,_adView.frame.size.height)];
+    //delegateメゾットhに書くことによって使用可能になる
+    _adView.delegate=self;
+    
+    [self.view addSubview:_adView];
+    //表示をさせるコード。部品を追加するイメージ
+    _adView.alpha=0.0;
+    //最初はバナーが表示されてないのでno
+    _isVisible= NO;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -150,6 +164,22 @@
     [[self navigationController]pushViewController:DetailViewController2 animated:YES];
     //この３行で１→２に画面遷移する
     NSLog(@"5");
+}
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    if (!_isVisible) {
+        //バナーが表示されるアニメーション
+        [UIView beginAnimations:@"animationAdBannerOn" context:nil];
+        
+        [UIView setAnimationDuration:0.3];
+        //animationの表示される時間０．３秒
+        banner.frame= CGRectOffset(banner.frame, 0, self.view.frame.size.height-self.view.frame.size.height/11.5);
+        banner.alpha=1.0;
+        [UIView commitAnimations];
+        
+        _isVisible=YES;
+        
+    }
 }
 
 

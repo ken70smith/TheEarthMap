@@ -12,7 +12,7 @@
 #import <iAd/iAd.h>
 
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UIWebViewDelegate,ADBannerViewDelegate>
 //画像に関係させる数字を送るグローバル変数
 @property(nonatomic,assign) int selectnum;
 

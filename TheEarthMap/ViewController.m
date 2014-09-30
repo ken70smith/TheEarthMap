@@ -46,6 +46,7 @@
     [mapView setRegion:cr];
     //縮尺を決定
     mapView.mapType=MKMapTypeStandard;
+    //mapView.mapType=MKMapTypeSatellite;
     //MKMapTypeHybrid...上空写真＋国名
     //MKMapTypeSatellite...上空写真
     //地図の種類を設定
@@ -193,7 +194,7 @@
                              
     [mapView addAnnotation:pin];
     
-    //バナーオブジェクトの生成
+    //広告バナーオブジェクトの生成
     _adView=[[ADBannerView alloc]initWithFrame:CGRectMake(0, -_adView.frame.size.height,_adView.frame.size.width,_adView.frame.size.height)];
     
     _adView.delegate=self;
@@ -358,7 +359,8 @@
     }
     if ([view.annotation.title isEqualToString:@"タイ"]) {
         DetailViewController.selectnum=33;
-        //写真の追加から
+        //ミャンマーとモロッコとアフリカ、ザンビア、ノルウェー、スウェーデン
+        
         
     }
 
@@ -372,6 +374,7 @@
 
     
 
+    //戻るボタンをcountry と言う名前に変更する。ポイントは親画面にメソッドを入力すること.initとallocはセットで適用する。
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title = @"Country";
     self.navigationItem.backBarButtonItem = barButton;
@@ -394,17 +397,18 @@
     
 
 }
-
+//バックパッカーのボタンを押すとテーブルヴュウーが表示されるメソッド
 -(void)tapBtn:(UIButton *)menuButton_tmp
 {
-    NSLog(@"Tap");
+    //コンソールに文字を表示してtapを感知できる
+    NSLog(@"Tap バックパッカー！！");
     
     [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
     
 
 
 }
-//バナーが表示させる時発動するメソッド
+//広告バナーが表示させる時発動するメソッド
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
     if (!_isVisible) {
         //バナーが表示されるアニメーション
@@ -417,7 +421,7 @@
         [UIView commitAnimations];
         
         _isVisible=YES;
-        
+
     }
 }
 
@@ -463,6 +467,11 @@
     circleImageView.layer.cornerRadius=circleImageView.frame.size.width *0.5f;
     circleImageView.clipsToBounds=YES;
     
+    circleImageView.userInteractionEnabled =YES;
+    
+    
+    circleImageView.tag=1;
+    
     [self.view addSubview:circleImageView];
     circleImageView.alpha=0.0;
     
@@ -480,7 +489,7 @@
     }
     [UIView commitAnimations];
     
-    
+
     
     //
     //    self.CirclePhoto.image = circleImage;
@@ -499,6 +508,37 @@
     //    
     
 }
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch =[touches anyObject];
+    NSLog(@"Tap画面のどこでも");
+    
+    DetailViewController *DetailViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    
+    switch (touch.view.tag) {
+        case 1:
+            
+            DetailViewController.selectnum=_slideCountryCounter;
+            [[self navigationController]pushViewController:DetailViewController animated:YES];
+            
+            
+            
+            break;
+            
+        default:
+            break;
+    }
+
+
+
+
+
+
+
+}
+
+
+
 
 -(void)viewDidDisappear:(BOOL)animated
 {
