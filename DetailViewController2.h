@@ -11,7 +11,7 @@
 //広告バナーの追加のimportに書き込む
 #import <iAd/iAd.h>
 
-@interface DetailViewController2 : UIViewController<UIWebViewDelegate,ADBannerViewDelegate>
+@interface DetailViewController2 : UIViewController<UIWebViewDelegate,ADBannerViewDelegate,UIScrollViewDelegate>
 //selectnumを２つ設定する。countryとphotoの二種類ご用意
 @property(nonatomic,assign) int photoselectnum;
 @property(nonatomic,assign) int countryselectnum;
@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *DetailLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *backimage;
 @property (weak, nonatomic) IBOutlet UIView *PhotoView;
+@property (weak, nonatomic) IBOutlet UIScrollView *ScrollView;
 
 - (IBAction)ShareBtn:(id)sender;
 

@@ -10,6 +10,7 @@
 
 
 @interface DetailViewController2 ()
+
 //dictionary型を定義.このdictionaryは国の説明と写真番号を記録
 {
     NSDictionary *_DetailDictionary;
@@ -21,6 +22,9 @@
 @end
 
 @implementation DetailViewController2
+@synthesize ScrollView;
+@synthesize Photodetail;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +38,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+//    self.ScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+//    self.ScrollView.delegate = self;
+//    self.ScrollView.contentSize = CGSizeMake(1600, 1200);
+
+    
+//写真にズーム機能を搭載する。
+    //最小倍率が等倍、最大倍率が三倍に設定する
+    
+    self.ScrollView.minimumZoomScale = 1.0;
+    self.ScrollView.maximumZoomScale = 3.0;
+    
+    //ヘッダーにデリゲートの宣言をしてselfで使用可能にする
+    ScrollView.delegate = self;
+    //self.ScrollView.contentSize=CGSizeMake(1600, 1200);
+    
+    
      //戻るボタンの生成
     //[self dismissViewControllerAnimated:YES completion:nil];
         
@@ -63,21 +85,7 @@
     //基本的な形はself.imageView.image=[uiimage imagenamed@"1-1.jpg"];
     self.Photodetail.image=[UIImage imageNamed:[NSString stringWithFormat:@"%d-%d.jpg",self.countryselectnum,self.photoselectnum]];
     self.Photodetail.alpha=1.0;
-    
-//    float imageW = self.Photodetail.image.size.width;
-//    float imageH = self.Photodetail.image.size.height;
-//    
-//    NSLog(@"よこ：%f",imageW);
-//    NSLog(@"たて：%f",imageH);
-//    float scale = (imageW > imageH ? 320.0f/imageH : 320.0f/imageW);
-//    
-//    NSLog(@"ひりつ：%f",scale);
-//    
-//    imageW = imageW * scale;
-//    imageH = imageH * scale;
-//    
-//    self.BackView.frame = CGRectMake(0, 100, imageW, imageH);
-    
+     
     
     
     
@@ -94,6 +102,8 @@
 //    _adView.alpha=0.0;
 //    //最初はバナーが表示されてないのでno
 //    _isVisible= NO;
+    
+    
     
     
     
@@ -185,11 +195,17 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
+
     
     return image;
 
 }
-
+//ズームイベントの実装
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)ScrollView {
+    //拡大したいimageを設定
+    return self.Photodetail;
+    //return PhotoView;
+}
 //広告バナーに関するメソッド
 //-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
 //    if (!_isVisible) {
@@ -205,6 +221,49 @@
 //        _isVisible=YES;
 //        
 //    }
+///**
+// * ScrollViewが拡大縮小されるたびに呼び出される
+// */
+//- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+//{
+//    [self updateImageCenter];
+//}
+//
+///**
+// * ScrollViewの拡大縮小終了時に呼び出される
+// */
+//- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView
+//                       withView:(UIView *)view
+//                        atScale:(CGFloat)scale
+//{
+//    [self updateImageCenter];
+//}
+//
+///**
+// * 拡大縮小された画像のサイズに合わせて中央座標を変更する
+// */
+//- (void)updateImageCenter
+//{
+//    // 画像の表示サイズを取得
+//    CGSize imageSize = self.Photodetail.image.size;
+//    imageSize.width *= self.ScrollView.zoomScale;
+//    imageSize.height *= self.ScrollView.zoomScale;
+//    
+//    // サブスクロールビューのサイズを取得
+//    CGRect  bounds = self.ScrollView.bounds;
+//    
+//    // イメージビューの中央の座標を計算
+//    CGPoint point;
+//    point.x = imageSize.width / 2;
+//    if (imageSize.width < bounds.size.width) {
+//        point.x += (bounds.size.width - imageSize.width) / 2;
+//    }
+//    point.y = imageSize.height / 2;
+//    if (imageSize.height < bounds.size.height) {
+//        point.y += (bounds.size.height - imageSize.height) / 2;
+//    }
+//    self.Photodetail.center = point;
+//}
 
 
 @end
