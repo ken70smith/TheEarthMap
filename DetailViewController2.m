@@ -11,6 +11,7 @@
 
 @interface DetailViewController2 ()
 
+
 //dictionary型を定義.このdictionaryは国の説明と写真番号を記録
 {
     NSDictionary *_DetailDictionary;
@@ -40,11 +41,20 @@
     [super viewDidLoad];
     
     
+    // UIScrollViewインスタンスを生成
 //    self.ScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 //    self.ScrollView.delegate = self;
 //    self.ScrollView.contentSize = CGSizeMake(1600, 1200);
-
-    
+//    
+//    // 縮小・拡大率を設定
+//    self.ScrollView.minimumZoomScale = 0.5f;
+//    self.ScrollView.maximumZoomScale = 5.0f;
+//    
+//    // ターゲットとなるコンテンツをaScrollViewのサブビューに追加
+//    [self.ScrollView addSubview:Photodetail];
+//    
+//    [self.PhotoView addSubview:self.ScrollView];
+//    
 //写真にズーム機能を搭載する。
     //最小倍率が等倍、最大倍率が三倍に設定する
     
@@ -201,11 +211,12 @@
 
 }
 //ズームイベントの実装
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)ScrollView {
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     //拡大したいimageを設定
-    return self.Photodetail;
-    //return PhotoView;
+ 
+    return Photodetail;
 }
+
 //広告バナーに関するメソッド
 //-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
 //    if (!_isVisible) {
